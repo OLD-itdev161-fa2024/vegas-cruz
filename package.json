@@ -19,12 +19,15 @@
   },
   "homepage": "https://github.com/itdev162-fa2024/vegas-cruz-161#readme",
   "dependencies": {
+    "16": "0.0.2",
     "bcryptjs": "^2.4.3",
     "config": "^3.3.9",
     "esm": "^3.2.25",
     "express": "^4.18.2",
     "express-validator": "^7.0.1",
-    "mongoose": "^7.5.3"
+    "mongodb": "^6.1.0",
+    "mongoose": "^6.12.0",
+    "v6": "0.0.0"
   },
   "devDependencies": {
     "concurrently": "^8.2.1",
