@@ -5,6 +5,8 @@ import {check, validationResult} from 'express-validator';
 import cors from 'cors';
 import bcrypt from 'bcryptjs';
 import User from './models/User';
+import jwt from 'jsonwebtoken';
+import config from 'config';
 
 
 //Initialize express application
@@ -76,7 +78,6 @@ async (req, res) => {
 
             //Save to the db and return
             await user.save();
-            res.send('User successfully registered');
         }catch(error){
             res.status(500).send('Server error');
         }
