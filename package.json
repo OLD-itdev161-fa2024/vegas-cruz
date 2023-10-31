@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node -r esm server.js",
-    "server": "nodemon -r esm server.js"
+    "server": "nodemon -r esm server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -22,16 +24,18 @@
     "16": "0.0.2",
     "bcryptjs": "^2.4.3",
     "config": "^3.3.9",
+    "cors": "^2.8.5",
     "esm": "^3.2.25",
     "express": "^4.18.2",
     "express-validator": "^7.0.1",
-    "findup-sync": "^0.1.2",
+    "findup-sync": "^5.0.0",
     "mongodb": "^6.1.0",
-    "mongoose": "^6.12.0",
+    "mongoose": "^6.12.2",
     "v6": "0.0.0"
   },
   "devDependencies": {
-    "concurrently": "^8.2.1",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "concurrently": "^8.2.2",
     "nodemon": "^3.0.1"
   }
 }
