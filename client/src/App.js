@@ -1,4 +1,5 @@
 import React from 'react';
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import './App.css';
 import axios from 'axios';
 
@@ -21,12 +22,38 @@ class App extends React.Component {
 
   render(){
     return(
-      <div className="App">
-        <header className="App-header">
-            Good Things
-        </header>
-        {this.state.data}
-      </div>
+      <Router>
+        <div className="App">
+          <header className="App-header">
+              <h1>Good Things</h1>
+              <ul>
+                <li>
+                  <Link to="/">home</Link>
+                </li>
+                <li>
+                  <Link to="/register">register</Link>
+                </li>
+                <li>
+                  <Link to="/login">login</Link>
+                </li>
+              </ul>
+          </header>
+          <main>
+            <Route exact path="/">
+              {this.state.data}
+            </Route>
+            <Switch>
+              <Route path="/register">
+                  Register
+              </Route>
+              <Route path="/login">
+                  Login
+              </Route>
+            </Switch>
+          </main>
+          {this.state.data}
+        </div>
+      </Router>
     );
   }
 }
