@@ -10,7 +10,7 @@ const Register = ({authenticateUser}) => {
         password: '',
         passwordConfirm: ''
     });
-    const [errorData, setErrorData] = useState[{errors: null}];
+    const [errorData, setErrorData] = useState({errors: null});
 
     const {name, email, password, passwordConfirm} = userData; 
     const { errors } = errorData;
@@ -68,8 +68,8 @@ const Register = ({authenticateUser}) => {
             <div>
                 <input 
                     type="text"
-                    placeholder='Name'
-                    name='name'
+                    placeholder="Name"
+                    name="name"
                     value={name}
                     onChange={e => onChange(e)}
                 />
@@ -77,8 +77,8 @@ const Register = ({authenticateUser}) => {
             <div>
                 <input 
                     type="text"
-                    placeholder='Email'
-                    name='name'
+                    placeholder="Email"
+                    name="email"
                     value={email}
                     onChange={e => onChange(e)} 
                 />
@@ -86,8 +86,8 @@ const Register = ({authenticateUser}) => {
             <div>
                 <input 
                     type="text"
-                    placeholder='Password'
-                    name='password'
+                    placeholder="Password"
+                    name="password"
                     value={password}
                     onChange={e => onChange(e)} 
                 />
@@ -95,8 +95,8 @@ const Register = ({authenticateUser}) => {
             <div>
                 <input 
                     type="text"
-                    placeholder='Confirm Password'
-                    name='passwordConfirm'
+                    placeholder="Confirm Password"
+                    name="passwordConfirm"
                     value={passwordConfirm}
                     onChange={e => onChange(e)} 
                 />
